@@ -143,6 +143,13 @@ bool ZorkUL::processCommand(Command command) {
         }
     }
 */
+    else if (commandWord.compare("Teleport") == 0){
+        if (!command.hasSecondWord()){
+            cout << "You lack the skill to randomly Teleport" << endl;
+        } else if (command.hasSecondWord()){
+            goRoom(command);
+        }
+    }
     else if (commandWord.compare("quit") == 0) {
 		if (command.hasSecondWord())
 			cout << "overdefined input"<< endl;
